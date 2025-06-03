@@ -5,8 +5,13 @@ public class kendaraanMain {
         Scanner sc = new Scanner(System.in);
         SingleLinkedList data = new SingleLinkedList();
         SingleLinkedListTr tr = new SingleLinkedListTr();
+        SingleLinkedListBBM sllBBM = new SingleLinkedListBBM();
         int menu;
 
+        BBM obj1 = new BBM("pertalite", 10000);
+        BBM obj2 = new BBM("Pertramax", 12400);
+        BBM obj3 = new BBM("Biosolar", 6800);
+        BBM obj4 = new BBM("Dexlite", 13400);
         do {
             System.out.println("\nSistem Antrian SPBU");
             System.out.println("1. Tambah Antrian.");
@@ -37,7 +42,7 @@ public class kendaraanMain {
                     System.out.println(">> sisa antrian : " + data.size());
                     break;
                 case 4:
-
+                    sllBBM.tampilDataBBM();
                     break;
                 case 5:
                     System.out.println("-- Riwayat Transaksi --");
