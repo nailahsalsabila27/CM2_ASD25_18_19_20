@@ -6,12 +6,8 @@ public class kendaraanMain {
         SingleLinkedList data = new SingleLinkedList();
         SingleLinkedListTr tr = new SingleLinkedListTr();
         SingleLinkedListBBM sllBBM = new SingleLinkedListBBM();
+        sllBBM.tambahSemuaBBM(); // ⬅️ Tambahkan semua BBM
         int menu;
-
-        BBM obj1 = new BBM("pertalite", 10000);
-        BBM obj2 = new BBM("Pertramax", 12400);
-        BBM obj3 = new BBM("Biosolar", 6800);
-        BBM obj4 = new BBM("Dexlite", 13400);
 
         do {
             System.out.println("\nSistem Antrian SPBU");
@@ -21,18 +17,18 @@ public class kendaraanMain {
             System.out.println("4. Layani Kendaraan.");
             System.out.println("5. Lihat Riwayat Transaksi.");
             System.out.println("6. Sort Riwayat Transaksi.");
-            System.out.println("7. keluar.");
+            System.out.println("7. Keluar.");
             System.out.print("Pilih Menu : ");
             menu = sc.nextInt();
             sc.nextLine();
 
             switch (menu) {
                 case 1:
-                    System.out.print("input plat nomor: ");
+                    System.out.print("Input plat nomor: ");
                     String plat = sc.nextLine();
-                    System.out.print("input jenis kendaraan: ");
+                    System.out.print("Input jenis kendaraan: ");
                     String jenis = sc.nextLine();
-                    System.out.print("input merk: ");
+                    System.out.print("Input merk: ");
                     String merk = sc.nextLine();
                     kendaraan add = new kendaraan(plat, jenis, merk);
                     data.addLast(add);
@@ -41,29 +37,51 @@ public class kendaraanMain {
                     data.printAntrian();
                     break;
                 case 3:
-                    System.out.println(">> sisa antrian : " + data.size());
+                    System.out.println(">> Sisa antrian : " + data.size());
                     break;
                 case 4:
+                    if (data.isEmpty()) {
+                        System.out.println("Tidak ada kendaraan dalam antrian.");
+                        break;
+                    }
+                    kendaraan dilayani = data.removeFirst();
+                    System.out.println("Kendaraan " + dilayani.platNomor);
+                    System.out.println("Daftar Jenis BBM:");
+                    System.out.printf("%-15s %-15s\n", "Jenis BBM", "Harga");
                     sllBBM.tampilDataBBM();
-                    System.out.print("Pilih BBM: ");
 
-                    System.out.println("Input Jumlah (Liter): ");
-                    System.out.println("Transaksi Berhasil Di catat!");
+                    System.out.print("\nPilih BBM:\ninput jenis BBM: ");
+                    String cari = sc.nextLine();
+                    BBM bbmDipilih = sllBBM.cariBBM(cari);
+                    if (bbmDipilih != null) {
+                        System.out.print("Input jumlah (liter): ");
+                        double liter = sc.nextDouble();
+                        sc.nextLine();
+                        double total = liter * bbmDipilih.hargaPerLiter;
+                        TransaksiPengisian t = new TransaksiPengisian(dilayani, bbmDipilih, liter, total);
+                        tr.addRiwayat(t);
+                        System.out.println(">> Transaksi berhasil dicatat");
+                    } else {
+                        System.out.println("BBM tidak ditemukan.");
+                    }
+                    break;
                 case 5:
                     System.out.println("-- Riwayat Transaksi --");
                     tr.tampilRiwayat();
                     break;
                 case 6:
                     data.sorting();
-
+                    System.out.println("Data kendaraan telah disorting.");
                     break;
                 case 7:
                     System.out.println("Terima Kasih!");
                     break;
                 default:
+                    System.out.println("Menu tidak tersedia.");
                     break;
             }
         } while (menu != 7);
         sc.close();
     }
+
 }

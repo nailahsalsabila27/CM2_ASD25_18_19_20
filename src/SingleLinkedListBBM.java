@@ -6,6 +6,17 @@ public class SingleLinkedListBBM {
         return (head == null);
     }
 
+    public BBM cariBBM(String nama) {
+        NodeBBM current = head;
+        while (current != null) {
+            if (current.data.namaBBM.equalsIgnoreCase(nama)) {
+                return current.data;
+            }
+            current = current.next;
+        }
+        return null;
+    }
+
     public void tampilDataBBM() {
         if (isEmpty()) {
             System.out.println("Linked list masih kosong");
@@ -17,4 +28,17 @@ public class SingleLinkedListBBM {
             }
         }
     }
+
+    public void tambahSemuaBBM() {
+        for (BBM b : BBM.daftarBBM) {
+            NodeBBM newNode = new NodeBBM(b, null);
+            if (isEmpty()) {
+                head = tail = newNode;
+            } else {
+                tail.next = newNode;
+                tail = newNode;
+            }
+        }
+    }
+
 }

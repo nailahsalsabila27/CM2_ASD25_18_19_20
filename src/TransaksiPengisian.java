@@ -12,8 +12,11 @@ public class TransaksiPengisian {
     }
 
     public void tampilRiwayatTransaksi() {
-        System.out.printf("%-10s %-10s %-10d %-10d\n", kendaraan.platNomor, kendaraan.tipe, bbm.namaBBM, totalBayar);
-        System.out.println();
+        System.out.printf("%-15s %-15s %-15s %-10.2f\n",
+                kendaraan.platNomor,
+                kendaraan.tipe,
+                bbm.namaBBM,
+                totalBayar);
     }
 
 }

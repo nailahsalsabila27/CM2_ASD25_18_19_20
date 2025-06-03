@@ -1,10 +1,19 @@
 public class SingleLinkedListTr {
     NodeTransaksi head;
     NodeTransaksi tail;
-    NodeBBM headbbm;
 
     boolean isEmpty() {
         return (head == null);
+    }
+
+    public void addRiwayat(TransaksiPengisian transaksi) {
+        NodeTransaksi newNode = new NodeTransaksi(transaksi, null);
+        if (isEmpty()) {
+            head = tail = newNode;
+        } else {
+            tail.next = newNode;
+            tail = newNode;
+        }
     }
 
     public void tampilRiwayat() {
@@ -19,9 +28,4 @@ public class SingleLinkedListTr {
         }
     }
 
-    // public int TransaksiHargaBBM(double liter){
-    // BBM data = new BBM(null, liter);
-    // double total = liter * data.hargaPerLiter;
-    // return total;
-    // }
 }
