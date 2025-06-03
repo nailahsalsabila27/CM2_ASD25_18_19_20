@@ -3,6 +3,7 @@ import java.util.Scanner;
 public class kendaraanMain {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        SingleLinkedList data = new SingleLinkedList();
         int menu;
         
         do {
@@ -19,6 +20,7 @@ public class kendaraanMain {
 
             switch (menu) {
                 case 1:
+
                     
                     break;
                 case 2:
