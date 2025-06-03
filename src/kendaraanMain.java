@@ -31,7 +31,7 @@ public class kendaraanMain {
                     data.addLast(add);
                     break;
                 case 2:
-
+                    data.printAntrian();
                     break;
                 case 3:
                     System.out.println(">> sisa antrian : " + data.size());
