@@ -6,22 +6,6 @@ public class SingleLinkedList {
         return (head == null);
     }
 
-
-    public void printAntrian() {
-        if (head == null) {
-            System.out.println("Antrian kosong.");
-            return;
-        }
-        System.out.println("Daftar Antrian Kendaraan:");
-        nodeKendaraan current = head;
-        while (current != null) {
-            System.out.printf("%-15s %-15s %-15s\n",
-                current.data.platNomor,
-                current.data.tipe,
-                current.data.merk);
-            current = current.next;
-        }
-    }
     public void addLast(kendaraan input) {
         nodeKendaraan ndInput = new nodeKendaraan(input,null);
         if (isEmpty()) {
@@ -32,7 +16,7 @@ public class SingleLinkedList {
             tail= ndInput;
         }
     }
-
+    
     public void sorting(){
         if(head==null) return;
         boolean swapped;
@@ -51,10 +35,12 @@ public class SingleLinkedList {
 
         }while(swapped);
     }
-
+    
     public void tampilSorting(){
         
     }
-
+    
+    
+    
 
 }

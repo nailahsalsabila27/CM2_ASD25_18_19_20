@@ -6,4 +6,11 @@ public class BBM {
         this.namaBBM=namaBBM;
         this.hargaPerLiter=hargaPerLiter;
     }
+    
+    public static BBM[] daftarBBM = {
+        new BBM("Pertalite", 10000),
+        new BBM("Pertamax", 12400),
+        new BBM("Biosolar", 6800),
+        new BBM("DexLite", 13400)
+    };
 }

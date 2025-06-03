@@ -5,6 +5,8 @@ public class kendaraanMain {
         Scanner sc = new Scanner(System.in);
         SingleLinkedList data = new SingleLinkedList();
         int menu;
+
+        
         
         do {
             System.out.println("\nSistem Antrian SPBU");
@@ -17,6 +19,7 @@ public class kendaraanMain {
             System.out.println("7. keluar.");
             System.out.print("Pilih Menu : ");
             menu = sc.nextInt();
+            sc.nextLine();
 
             switch (menu) {
                 case 1:
@@ -36,7 +39,7 @@ public class kendaraanMain {
                     
                     break;
                 case 4:
-
+                    data.BBM();
                     break;
                 case 5:
                     
