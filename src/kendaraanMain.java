@@ -27,7 +27,7 @@ public class kendaraanMain {
                     System.out.print("input merk: ");
                     String merk = sc.nextLine();
                     kendaraan add = new kendaraan(plat, jenis, merk);
-                    // data.addLast(add);
+                    data.addLast(add);
                     break;
                 case 2:
                     
@@ -42,7 +42,7 @@ public class kendaraanMain {
                     
                     break;
                 case 6:
-                    // data.sorting();
+                    data.sorting();
                     
                     break;
                 case 7:
