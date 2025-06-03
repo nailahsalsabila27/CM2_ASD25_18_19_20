@@ -24,13 +24,13 @@ public class kendaraanMain {
                     
                     break;
                 case 2:
-                    
+                    data.printAntrian();
                     break;
                 case 3:
                     
                     break;
                 case 4:
-                    
+
                     break;
                 case 5:
                     
