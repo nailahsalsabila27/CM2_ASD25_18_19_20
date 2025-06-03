@@ -20,8 +20,14 @@ public class kendaraanMain {
 
             switch (menu) {
                 case 1:
-
-                    
+                    System.out.print("input plat nomor: ");
+                    String plat = sc.nextLine();
+                    System.out.print("input jenis kendaraan: ");
+                    String jenis = sc.nextLine();
+                    System.out.print("input merk: ");
+                    String merk = sc.nextLine();
+                    kendaraan add = new kendaraan(plat, jenis, merk);
+                    // data.addLast(add);
                     break;
                 case 2:
                     
@@ -36,6 +42,7 @@ public class kendaraanMain {
                     
                     break;
                 case 6:
+                    // data.sorting();
                     
                     break;
                 case 7:
