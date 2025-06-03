@@ -1,6 +1,7 @@
 public class SingleLinkedListTr {
     NodeTransaksi head;
     NodeTransaksi tail;
+    NodeBBM headbbm;
 
     boolean isEmpty() {
         return (head == null);
@@ -17,4 +18,10 @@ public class SingleLinkedListTr {
             }
         }
     }
+
+    // public int TransaksiHargaBBM(double liter){
+    // BBM data = new BBM(null, liter);
+    // double total = liter * data.hargaPerLiter;
+    // return total;
+    // }
 }

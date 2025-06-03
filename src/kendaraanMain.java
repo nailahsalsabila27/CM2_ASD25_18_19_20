@@ -43,6 +43,10 @@ public class kendaraanMain {
                     break;
                 case 4:
                     sllBBM.tampilDataBBM();
+                    System.out.print("Pilih BBM: ");
+
+                    System.out.println("Input Jumlah (Liter): ");
+                    System.out.println("Transaksi Berhasil Di catat!");
                     break;
                 case 5:
                     System.out.println("-- Riwayat Transaksi --");
