@@ -4,8 +4,9 @@ public class kendaraanMain {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         SingleLinkedList data = new SingleLinkedList();
+        SingleLinkedListTr tr = new SingleLinkedListTr();
         int menu;
-        
+
         do {
             System.out.println("\nSistem Antrian SPBU");
             System.out.println("1. Tambah Antrian.");
@@ -30,20 +31,21 @@ public class kendaraanMain {
                     data.addLast(add);
                     break;
                 case 2:
-                    
+
                     break;
                 case 3:
-                    
+                    System.out.println(">> sisa antrian : " + data.size());
                     break;
                 case 4:
-                    
+
                     break;
                 case 5:
-                    
+                    System.out.println("-- Riwayat Transaksi --");
+                    tr.tampilRiwayat();
                     break;
                 case 6:
                     data.sorting();
-                    
+
                     break;
                 case 7:
                     System.out.println("Terima Kasih!");
@@ -51,7 +53,7 @@ public class kendaraanMain {
                 default:
                     break;
             }
-        } while (menu != 7 );
+        } while (menu != 7);
         sc.close();
     }
 }

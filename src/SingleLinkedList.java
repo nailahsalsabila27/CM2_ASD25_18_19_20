@@ -2,42 +2,49 @@ public class SingleLinkedList {
     nodeKendaraan head;
     nodeKendaraan tail;
 
+    int size = 0;
+
     boolean isEmpty() {
         return (head == null);
     }
 
+    public int size() {
+        return size;
+    }
+
     public void addLast(kendaraan input) {
-        nodeKendaraan ndInput = new nodeKendaraan(input,null);
+        nodeKendaraan ndInput = new nodeKendaraan(input, null);
         if (isEmpty()) {
             head = ndInput;
-            tail=ndInput;
+            tail = ndInput;
         } else {
-            tail.next=ndInput;
-            tail= ndInput;
+            tail.next = ndInput;
+            tail = ndInput;
         }
     }
 
-    public void sorting(){
-        if(head==null) return;
+    public void sorting() {
+        if (head == null)
+            return;
         boolean swapped;
         do {
             swapped = false;
             nodeKendaraan curr = head;
-            while (curr.next !=null) {
-                if(curr.data.platNomor.compareTo(curr.next.data.platNomor) > 0) {
+            while (curr.next != null) {
+                if (curr.data.platNomor.compareTo(curr.next.data.platNomor) > 0) {
                     kendaraan temp = curr.data;
                     curr.data = curr.next.data;
-                    curr.next.data= temp;
+                    curr.next.data = temp;
                     swapped = true;
                 }
-                curr= curr.next;
+                curr = curr.next;
             }
 
-        }while(swapped);
+        } while (swapped);
     }
 
-    public void tampilSorting(){
-        
+    public void tampilSorting() {
+
     }
 
 }
