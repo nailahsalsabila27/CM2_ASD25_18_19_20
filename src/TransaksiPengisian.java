@@ -11,4 +11,9 @@ public class TransaksiPengisian {
         this.totalBayar = totalBayar;
     }
 
+    public void tampilRiwayatTransaksi() {
+        System.out.printf("%-10s %-10s %-10d %-10d\n", kendaraan.platNomor, kendaraan.tipe, bbm.namaBBM, totalBayar);
+        System.out.println();
+    }
+
 }
