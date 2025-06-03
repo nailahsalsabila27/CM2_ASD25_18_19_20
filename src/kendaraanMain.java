@@ -70,8 +70,9 @@ public class kendaraanMain {
                     tr.tampilRiwayat();
                     break;
                 case 6:
-                    data.sorting();
+                    tr.sorting();
                     System.out.println("Data kendaraan telah disorting.");
+                    tr.tampilRiwayat();
                     break;
                 case 7:
                     System.out.println("Terima Kasih!");

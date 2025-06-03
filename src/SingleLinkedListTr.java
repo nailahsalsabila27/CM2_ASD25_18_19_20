@@ -28,4 +28,24 @@ public class SingleLinkedListTr {
         }
     }
 
+    public void sorting() {
+        if (head == null)
+            return;
+        boolean swapped;
+        do {
+            swapped = false;
+            NodeTransaksi curr = head;
+            while (curr.next != null) {
+                if (curr.data.kendaraan.platNomor.compareTo(curr.next.data.kendaraan.platNomor) > 0) {
+                    TransaksiPengisian temp = curr.data;
+                    curr.data = curr.next.data;
+                    curr.next.data = temp;
+                    swapped = true;
+                }
+                curr = curr.next;
+            }
+
+        } while (swapped);
+    }
+
 }
