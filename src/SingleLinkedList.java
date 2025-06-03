@@ -8,6 +8,10 @@ public class SingleLinkedList {
         return (head == null);
     }
 
+    public int size(){
+        return size;
+    }
+
 
     public void printAntrian() {
         if (head == null) {
