@@ -10,6 +10,6 @@ public class kendaraan {
     }
 
     public void tampilkanInformasi() {
-        System.out.printf("-15%s, -15%s, -15%s", platNomor, tipe, merk);
+        System.out.printf("%-20s %-20s %-20s\n", platNomor, tipe, merk);
     }
 }

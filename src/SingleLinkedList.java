@@ -8,9 +8,10 @@ public class SingleLinkedList {
         return (head == null);
     }
 
-    public int size() {
+    public int size(){
         return size;
     }
+
 
     public void printAntrian() {
         if (head == null) {
@@ -21,13 +22,12 @@ public class SingleLinkedList {
         nodeKendaraan current = head;
         while (current != null) {
             System.out.printf("%-15s %-15s %-15s\n",
-                    current.data.platNomor,
-                    current.data.tipe,
-                    current.data.merk);
+                current.data.platNomor,
+                current.data.tipe,
+                current.data.merk);
             current = current.next;
         }
     }
-
     public void addLast(kendaraan input) {
         nodeKendaraan ndInput = new nodeKendaraan(input, null);
         if (isEmpty()) {
@@ -39,9 +39,8 @@ public class SingleLinkedList {
         }
     }
 
-    public void sorting() {
-        if (head == null)
-            return;
+    public void sorting(){
+        if(head==null) return;
         boolean swapped;
         do {
             swapped = false;
@@ -59,8 +58,9 @@ public class SingleLinkedList {
         } while (swapped);
     }
 
-    public void tampilSorting() {
-
+    public void tampilSorting(){
+        
     }
+
 
 }

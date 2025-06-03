@@ -12,6 +12,7 @@ public class kendaraanMain {
         BBM obj2 = new BBM("Pertramax", 12400);
         BBM obj3 = new BBM("Biosolar", 6800);
         BBM obj4 = new BBM("Dexlite", 13400);
+
         do {
             System.out.println("\nSistem Antrian SPBU");
             System.out.println("1. Tambah Antrian.");
@@ -23,6 +24,7 @@ public class kendaraanMain {
             System.out.println("7. keluar.");
             System.out.print("Pilih Menu : ");
             menu = sc.nextInt();
+            sc.nextLine();
 
             switch (menu) {
                 case 1:
@@ -47,7 +49,6 @@ public class kendaraanMain {
 
                     System.out.println("Input Jumlah (Liter): ");
                     System.out.println("Transaksi Berhasil Di catat!");
-                    break;
                 case 5:
                     System.out.println("-- Riwayat Transaksi --");
                     tr.tampilRiwayat();
